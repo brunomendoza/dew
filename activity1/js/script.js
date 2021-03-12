@@ -27,13 +27,13 @@ var thElement = document.createElement('thead');
 var trElement = document.createElement('tr');
 var theadElement = document.createElement('thead');
 
-var thIdElement = document.createElement('td');
+var thIdElement = document.createElement('th');
 thIdElement.innerHTML = 'Id';
 
-var thNameElement = document.createElement('td');
+var thNameElement = document.createElement('th');
 thNameElement.innerHTML = 'Name';
 
-var thDepartmentElement = document.createElement('td');
+var thDepartmentElement = document.createElement('th');
 thDepartmentElement.innerHTML = 'Department';
 
 console.log(thIdElement);
