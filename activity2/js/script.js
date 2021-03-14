@@ -1,23 +1,30 @@
+(() => {
+    if ($(document).ready()) {
+    
+        $.getJSON("./employees.json").done((arr) => {
+            var $wrapperElement = $('#table-container');
+            var $tableElement = $('<table>');
+            var $theadElement = $('<thead><tr><td>id</td><td>Name</td><td>Department</td></tr></thead>')
+            var $tbodyElement = $('<tbody>');
+        
+            $tableElement.append($theadElement);
 
-if ($(document).ready()) {
-    var $wrapperElement = $('#table-container');
+            arr.forEach(obj => {
+                var $trElement = $('<tr>');
 
-    $.getJSON("./employees.json", (data, status, jqXHR) => {
-        console.log(status);
-        console.log(jqXHR);
+                $trElement.append($('<td>').text(obj.id));
+                $trElement.append($('<td>').text(obj.name));
+                $trElement.append($('<td>').text(obj.department));
 
-        $.each(data, function(key, val) {
-            $.each(val, function(objKey, objVal) {
-                // console.log(objKey + ": " + objVal);
+                $tbodyElement.append($trElement);   
             });
-        });
-    });
 
-    var $theadElement = $('<thead><tr><td>id</td><td>Name</td><td>Department</td></tr></thead>')
-    var $tableElement = $('<table>');
-    $tableElement.append($theadElement);
-    $wrapperElement.append($tableElement);
-    console.log($tableElement);
-    var tbodyElement = document.createElement('tbody');
-}
+            $tableElement.append($theadElement);
+            $tableElement.append($tbodyElement);
+            $tableElement.addClass(['table', 'table-dark']);
+
+            $wrapperElement.append($tableElement);
+        });
+    }
+})();
 
