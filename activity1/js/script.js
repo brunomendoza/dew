@@ -23,9 +23,11 @@ var employees = [
 
 var wrapperElement = document.getElementById('table-container');
 var tableElement = document.createElement('table');
-var thElement = document.createElement('thead');
-var trElement = document.createElement('tr');
-var theadElement = document.createElement('thead');
+
+var thElement = document.createElement('th');
+var theadElement = tableElement.createTHead();
+
+var theadRowElement = theadElement.insertRow();
 
 var thIdElement = document.createElement('th');
 thIdElement.innerHTML = 'Id';
@@ -36,19 +38,15 @@ thNameElement.innerHTML = 'Name';
 var thDepartmentElement = document.createElement('th');
 thDepartmentElement.innerHTML = 'Department';
 
-console.log(thIdElement);
+theadRowElement.appendChild(thIdElement);
+theadRowElement.appendChild(thNameElement);
+theadRowElement.appendChild(thDepartmentElement);
 
-trElement.appendChild(thIdElement);
-trElement.appendChild(thNameElement);
-trElement.appendChild(thDepartmentElement);
-
-theadElement.appendChild(trElement);
-tableElement.appendChild(theadElement);
 wrapperElement.appendChild(tableElement);
 
 var tdIdElement, tdNameElement, tdDeparmentElement;
 
-tbodyElement = document.createElement('tbody');
+tbodyElement = tableElement.createTBody();
 
 var tbodyElements = employees.map((e) => {
     tdIdElement = document.createElement('td');
@@ -72,6 +70,5 @@ for (var i = 0; i < tbodyElements.length; i++) {
     tbodyElement.appendChild(tbodyElements[i]);
 }
 
-tableElement.append(tbodyElement);
 tableElement.classList.add('table');
 tableElement.classList.add('table-dark');
