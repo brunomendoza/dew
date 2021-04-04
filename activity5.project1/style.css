@@ -1,0 +1,57 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.display {
+    box-sizing: border-box;
+    background-color: black;
+    padding: .5rem;
+    min-height: 4rem;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.numpad {
+    padding: .25rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, minmax(2rem, auto));
+    gap: 0.25rem;
+    background-color: whitesmoke;
+}
+
+.numpad__button {
+    box-sizing: border-box;
+    background-color: white;
+    margin: 0;
+    border: 0;
+}
+
+.numpad__button:hover {
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;
+}
+
+.numpad__button:active {
+    background-color: whitesmoke;
+    color: darkgrey;
+}
+
+.numpad__button--equals {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background-color: darkorange;
+}
+
+.numpad__button--operator {
+    background-color: lightgrey;
+}
+
+.numpad__button--operator:hover {
+    background-color: whitesmoke;
+}
