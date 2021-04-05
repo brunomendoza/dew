@@ -7,6 +7,8 @@ class Calculator extends Window {
     constructor(options) {
         super(options);
 
+        this.setTitle("Calculator");
+        
         this.display = new Display();
         this.numpad = new Numpad();
 
