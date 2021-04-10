@@ -1,0 +1,8 @@
+.board {
+    background-color: whitesmoke;
+}
+
+.ball {
+    background-color: red;
+    border-radius: 50%;
+}
