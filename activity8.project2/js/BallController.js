@@ -2,7 +2,7 @@ import { Ball } from './components/Ball.js'
 import { Controller } from './Controller.js'
 
 class BallController extends Controller {
-    constructor() {
+    constructor(view, model) {
         this.ball = new Ball()
 
         this.ball.element.addEventListener('keydown', e => {
