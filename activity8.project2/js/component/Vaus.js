@@ -1,9 +1,14 @@
 class Vaus {
-    constructor() {
-        var vaus = document.createElement('div')
+    constructor(x, y, width, height) {
+        this.element = document.createElement('div')
+        
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
 
-        vaus.id = 'vaus'
-        vaus.class = 'vaus'
+        this.element.id = 'vaus';
+        this.element.class = 'arkanoid__vaus';
     }
 }
 

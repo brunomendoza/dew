@@ -1,11 +1,11 @@
-import { Ball } from './components/Ball.js'
+import { Ball } from './component/Ball.js'
 import { Controller } from './Controller.js'
 
 class BallController extends Controller {
     constructor(view, model) {
-        this.ball = new Ball()
+        super(view, model)
 
-        this.ball.element.addEventListener('keydown', e => {
+        document.addEventListener('keydown', e => {
             if (e.isComposing || e.key === 229) {
                 return
             }
@@ -13,4 +13,15 @@ class BallController extends Controller {
             console.log(e.key)
         })
     }
+
+    update = (board) => {
+        var dx = this.originx + this.size
+        var dy = this.y + this.size
+
+        if(dx >= board.width) {
+            this.velocityX = -(this.speed)
+        }
+    }
 }
+
+export { BallController }

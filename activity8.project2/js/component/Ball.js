@@ -1,23 +1,20 @@
 class Ball {
-    constructor(radius) {
-        this.ball = document.createElement('div')
+    constructor(x, y, diameter) {
+        this.element = document.createElement('div');
 
-        this.ball.id = 'ball'
-        this.ball.classList.add('ball')
+        this.x = x;
+        this.y = y;
+        this.diameter = diameter;
 
-        this.ball.style.width = radius * 2 + 'px'
-        this.ball.style.height = radius * 2 + 'px'
-        this.ball.style.borderRadius = '50%'
-        this.ball.style.backgroundColor = 'grey'
+        this.element.id = 'ball';
+        this.element.classList.add('arkanoid__ball');
 
-        this.ball.style.position = 'absolute'
-        this.ball.style.top = 20 + 'px'
-        this.ball.style.left = 20 + 'px'
-    }
+        this.element.style.width = this.diameter + 'px';
+        this.element.style.height = this.diameter + 'px';
 
-    get element() {
-        return this.ball;
+        this.element.style.top = this.x + 'px';
+        this.element.style.left = this.y + 'px';
     }
 }
 
-export { Ball }
+export { Ball };

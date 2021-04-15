@@ -1,8 +1,20 @@
-.board {
-    background-color: whitesmoke;
+.arkanoid__board {
+    position: relative;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid silver;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-.ball {
+.arkanoid__ball {
+    position: absolute;
     background-color: red;
     border-radius: 50%;
+}
+
+.arkanoid__block {
+    box-sizing: border-box;
+    flex: 1;
+    background: orange;
+    border: 1px solid black;
 }
