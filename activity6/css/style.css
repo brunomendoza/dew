@@ -1,0 +1,26 @@
+#root {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: .5rem;
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+main {
+    grid-column-start: 1;
+    grid-column-end: 9;
+}
+
+aside {
+    grid-column-start: 9;
+    grid-column-end: -1;
+}
+
+footer {
+    grid-column: 1 / -1;
+}
