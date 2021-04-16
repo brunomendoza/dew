@@ -1,0 +1,62 @@
+:root {
+    --button-width: 4rem;
+}
+
+.mediaplayer__window {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    position: absolute;
+
+    background-color: whitesmoke;
+    border: 1px solid silver;
+}
+
+.mediaplayer__title {
+    padding: .25rem;
+    border-bottom: 1px solid silver;
+    font-size: .75rem;
+    background-color: grey;
+    color: white;
+}
+
+.mediaplayer__controlpad {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: .5rem;
+}
+
+.controlpad__button {
+    width: var(--button-width);
+    cursor: pointer;
+}
+
+.controlpad__button > span {
+    display: block;
+    text-align: center;
+    font-size: calc(var(--button-width) * .6);
+    color: grey;
+    user-select: none;
+}
+
+.controlpad__button--play {
+    order: 2;
+}
+.controlpad__button--stop {
+    order: 3;
+}
+.controlpad__button--skip-next {
+    order: 4;
+}
+.controlpad__button--skip-previous {
+    order: 1;
+}
+
+.controlpad__button:hover > span {
+    color: silver;
+}
+
+.controlpad__button:active > span {
+    color: orange;
+}
+
