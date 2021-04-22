@@ -8,4 +8,7 @@ export default class ControlPad {
         this.parent.appendChild(this.elem);
     }
 
+    addComponent(component) {
+        this.elem.appendChild(component.elem);
+    }
 }

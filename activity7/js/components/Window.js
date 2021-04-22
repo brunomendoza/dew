@@ -26,4 +26,8 @@ export default class Window {
         this.title.innerHTML = text;
         this.elem.appendChild(this.title);
     };
+
+    addComponent = (component) => {
+        this.elem.appendChild(component.elem);
+    }
 }

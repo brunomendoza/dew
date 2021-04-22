@@ -1,9 +1,9 @@
 export default class Button {
-    constructor(parent, materialIconName, funcName, flexOrderClass) {
+    constructor(materialIconName, actionName, flexOrderClass) {
         this.elem = document.createElement("div");
         this.parent = parent;
 
-        this.elem.dataset.mediaplayer = funcName;
+        this.elem.dataset.action = actionName;
         this.elem.classList.add(flexOrderClass);
         this.elem.classList.add("controlpad__button");
         
@@ -12,6 +12,5 @@ export default class Button {
         this.iconElem.innerHTML = materialIconName;
         
         this.elem.appendChild(this.iconElem);
-        this.parent.appendChild(this.elem);
     }
 }
