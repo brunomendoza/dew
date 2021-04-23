@@ -21,22 +21,16 @@ async function loadContent(parent, url) {
                     if (a.getAttribute("href") === "./about.html") {
                         a.classList.add("navbar__link--active");
                         a.setAttribute("href", "#");
-                    } else {
-                        a.classList.remove("navbar__link--active");
                     }
                 } else if (/contact.html$/.test(window.location)) {
                     if (a.getAttribute("href") === "./contact.html") {
                         a.classList.add("navbar__link--active");
                         a.setAttribute("href", "#");
-                    } else {
-                        a.classList.remove("navbar_link--active");
                     }
                 } else {
                     if (a.getAttribute("href") === "./index.html") {
                         a.classList.add("navbar__link--active");
                         a.setAttribute("href", "#");
-                    } else {
-                        a.classList.remove("navbar__link--active");
                     }
                 }
             });
