@@ -41,9 +41,9 @@ async function loadContent(parent, url) {
 }
 
 let opts = [
-    { component: document.querySelector('header'), url: './header.html' },   
-    { component: document.querySelector('footer'), url: './footer.html' },   
-    { component: document.querySelector('aside'), url: './aside.html' },   
+    { component: document.querySelector('header'), url: './modules/header.html' },   
+    { component: document.querySelector('footer'), url: './modules/footer.html' },   
+    { component: document.querySelector('aside'), url: './modules/aside.html' },   
 ]
 
 opts.forEach(opt => loadContent(opt.component, opt.url));
