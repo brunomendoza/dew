@@ -2,8 +2,9 @@
     position: relative;
     background-color: rgb(245, 245, 245);
     border: 1px solid silver;
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
 }
 
 .arkanoid__ball {
@@ -14,7 +15,7 @@
 
 .arkanoid__block {
     box-sizing: border-box;
-    flex: 1;
     background: orange;
+    margin: 0;
     border: 1px solid black;
 }
